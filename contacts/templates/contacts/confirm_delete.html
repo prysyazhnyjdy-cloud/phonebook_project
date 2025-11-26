@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Видалити?</title>
+</head>
+<body style="font-family:Arial;background:#f7f7f7;">
+
+<div style="width:600px;margin:50px auto;background:white;padding:20px;border-radius:10px;">
+
+    <h2>Видалити контакт <b>{{ contact.full_name }}</b>?</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" style="padding:10px 20px;background:red;color:white;border:none;border-radius:5px;">
+            Видалити
+        </button>
+    </form>
+
+    <br>
+    <a href="{% url 'contact_detail' contact.id %}">⬅ Назад</a>
+
+</div>
+
+</body>
+</html>

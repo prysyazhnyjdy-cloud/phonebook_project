@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+}
+
+/* Контейнер для списку */
+.container {
+    width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Контакти */
+.contact a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Додати */
+.add-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #28a745;
+    color:white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.add-btn:hover {
+    background: #218838;
+}
+
+/* Пошукова строка */
+.search-box {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* Картка (detail, form, delete) */
+.card {
+    background:white;
+    padding:20px;
+    margin:50px auto;
+    width:600px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Кнопки */
+.back-btn, .edit-btn, .delete-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.back-btn {
+    background: #6c757d;
+}
+
+.edit-btn {
+    background: #007bff;
+}
+
+.delete-btn {
+    background: #dc3545;
+}
+
+.back-btn:hover {
+    background: #5a6268;
+}
+
+.edit-btn:hover {
+    background: #0069d9;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+/* 🔥 Додані стилі для FORM.HTML */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.save-btn {
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.save-btn:hover {
+    background: #218838;
+}
+
+/* Кнопка назад у формі */
+.back-btn {
+    margin-top: 10px;
+    display: inline-block;
+}
+/* 🔥 Стилі для сторінки підтвердження видалення */
+.delete-title {
+    color: #dc3545;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.delete-warning {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Кнопки в delete */
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+.cancel-btn {
+    background: #6c757d;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.cancel-btn:hover {
+    background: #5a6268;
+}

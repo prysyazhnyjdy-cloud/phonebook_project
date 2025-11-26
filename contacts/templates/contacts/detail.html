@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ contact.full_name }}</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'contacts/style.css' %}">
+</head>
+
+<body class="bg-light">
+
+<div class="card">
+    <h1>{{ contact.full_name }}</h1>
+
+    <p><strong>Телефон:</strong> {{ contact.phone_number }}</p>
+    <p><strong>Email:</strong> {{ contact.email }}</p>
+    <p><strong>Примітка:</strong> {{ contact.note }}</p>
+
+    <br>
+
+    <a class="back-btn" href="{% url 'contact_list' %}">⬅ Повернутись</a>
+    <a class="edit-btn" href="{% url 'contact_edit' contact.id %}">✏️ Редагувати</a>
+    <a class="delete-btn" href="{% url 'contact_delete' contact.id %}">🗑 Видалити</a>
+</div>
+
+</body>
+</html>

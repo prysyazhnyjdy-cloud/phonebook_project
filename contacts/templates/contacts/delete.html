@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Видалення контакту</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'contacts/style.css' %}">
+</head>
+
+<body class="bg-light">
+
+<div class="card">
+
+    <h1 style="color:#c82333;">Видалити контакт?</h1>
+
+    <p>
+        Ви дійсно хочете видалити контакт:<br><br>
+        <strong style="font-size: 20px;">{{ contact.full_name }}</strong>?
+    </p>
+
+    <form method="POST" style="margin-top:20px;">
+        {% csrf_token %}
+
+        <button type="submit" class="delete-btn">🗑 Так, видалити</button>
+
+        <a class="back-btn" href="{% url 'contact_detail' contact.id %}">
+            ⬅ Скасувати
+        </a>
+    </form>
+
+</div>
+
+</body>
+</html>

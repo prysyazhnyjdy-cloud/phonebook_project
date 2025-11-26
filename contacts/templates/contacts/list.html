@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Телефонний довідник</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'contacts/style.css' %}">
+
+    <style>
+        body { font-family: Arial, sans-serif; background: #f7f7f7; }
+        .container { width: 600px; margin: 50px auto; background: white; padding: 20px; border-radius: 10px; }
+        .title { text-align: center; font-size: 28px; margin-bottom: 20px; }
+        .contact a { text-decoration: none; color: #007bff; font-size: 18px; }
+        .add-btn { display: inline-block; padding: 10px 15px; background: #28a745; color:white; border-radius: 5px; margin-bottom: 15px; text-decoration: none; }
+        .search-box { width: 100%; padding: 10px; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">Телефонний довідник</h1>
+
+    <form method="GET">
+        <input class="search-box" type="text" name="q" placeholder="Пошук..." value="{{ query }}">
+    </form>
+
+    <a class="add-btn" href="{% url 'contact_add' %}">+ Додати новий контакт</a>
+
+    <hr>
+
+    {% if contacts %}
+        <ul>
+            {% for c in contacts %}
+                <li class="contact">
+                    <a href="{% url 'contact_detail' c.id %}">
+                        {{ c.full_name }} — {{ c.phone_number }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Немає контактів.</p>
+    {% endif %}
+</div>
+
+</body>
+</html>

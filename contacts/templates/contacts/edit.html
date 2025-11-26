@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Редагувати контакт</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'contacts/style.css' %}">
+</head>
+
+<body class="bg-light">
+
+<div class="card">
+    <h1>Редагувати контакт</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>ПІБ:</label>
+        <input type="text" name="full_name"
+               class="form-input"
+               value="{{ contact.full_name }}">
+
+        <label>Телефон:</label>
+        <input type="text" name="phone_number"
+               class="form-input"
+               value="{{ contact.phone_number }}">
+
+        <label>Email:</label>
+        <input type="email" name="email"
+               class="form-input"
+               value="{{ contact.email }}">
+
+        <label>Примітка:</label>
+        <textarea name="note" class="form-input">{{ contact.note }}</textarea>
+
+        <button type="submit" class="save-btn">💾 Зберегти</button>
+    </form>
+
+    <a class="back-btn" href="{% url 'contact_detail' contact.id %}">
+        ⬅ Повернутись
+    </a>
+</div>
+
+</body>
+</html>
